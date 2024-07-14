@@ -28,15 +28,21 @@ body{
 .orange{
     color: #FF900E;
 }
-
+main{
+    width: 75%;
+    margin: 0 auto;
+}
+section{
+    margin-top: 100px;
+}
 /* navigation section */
 header{
     background-color: rgba(255, 144, 14, 0.1);
     width: 100%;
 }
-nav{
+nav {
     display: flex;
-    width: 80%;
+    max-width: 80%;
     justify-content: space-between;
     margin: 0 auto;
     padding: 50px;
@@ -46,7 +52,7 @@ nav li {
 }
 nav a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     color: #424242;
 }
@@ -55,31 +61,33 @@ nav a{
     gap: 40px;
 }
 nav h3{
-    font-size: 45px;
+    font-size:3rem;
     font-weight: 700;
 }
 /* content section */
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
 h2{
-    font-size: 64px;
+    font-size:4rem;
 font-weight: 700;
 margin-bottom: 30px;
 }
-.content{
+.banner-content{
     width: 40%;
     margin: 0 auto;
 }
-.hero-img{
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+.banner-img{
+   margin: 50px auto;
+   max-width: 100%;
 }
 /* feature section */
 .feature{
     display: flex;
-    width: 70%;
     gap: 70px;
     align-items: center;
-    margin: 50px auto;
 }
 .feature-img{
     display: grid;
@@ -87,11 +95,30 @@ margin-bottom: 30px;
     gap: 20px;
 }
 .feature-content h3{
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: 700;
 }
 .feature-content p{
     color: #727272;
     margin-top: 24px;
     margin-bottom: 32px;
+}
+
+/* responsive */
+@media screen and (max-width : 576px) {
+    nav,.feature{
+        flex-direction: column;
+    }
+    .navbar, nav{
+        gap: 20px;
+    }
+    .banner-content{
+        width: 90%;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .feature-img{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
