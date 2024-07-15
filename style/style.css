@@ -108,25 +108,23 @@ margin-bottom: 30px;
 /* exprience section */
 .exprience{
     display: flex;
-    justify-content: space-between;   
+    gap: 140px;  
 }
 .exprience-content>h3{
     width: 460px; 
     border-left: 5px solid #FF900E;
     padding-left: 30px;
 }
-.exprience-content{
-    width: 40%;
-}
+
 .exp-text{
     background-color: #FF900E;
-    width: 30%;
+    width: 40%;
     padding: 40px;
     color: white;
     border-radius: 8px;
+    margin-top: -130px;
+    margin-left: -80px;
     position: relative;
-    bottom: 10%;
-    right: 10%;
 }
 .large{
     font-size: 4rem;
@@ -139,9 +137,6 @@ margin-bottom: 30px;
 .content-section{
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     padding: 30px;
-}
-.exprience-img img{
-    position:relative;
 }
 /* some facts style section */
 .main-card{
@@ -167,6 +162,28 @@ margin-bottom: 30px;
     width: 540px;
     margin-bottom:100px;
 }
+/* sponsor section */
+.sponsor-content{
+    width: 540px;
+    margin: 50px auto;
+}
+.sponsor-img{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    filter: grayscale(100%);
+}
+
+/* footer section */
+.footer{
+    background-color: rgb(255, 244, 231);
+    width: 75%;
+    margin: 150px auto;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
 /* responsive */
 @media screen and (max-width : 576px) {
     nav,.feature,.exprience{
@@ -175,24 +192,25 @@ margin-bottom: 30px;
     .navbar, nav{
         gap: 20px;
     }
-    .banner-content{
-        width: 90%;
-    }
     h2,.large{
         font-size: 2rem;
     }
     .feature-img{
         grid-template-columns: repeat(1,1fr);
     }
-    .exprience-content,.outside-card p{
+    .exprience-content,.outside-card p,.sponsor-content,.banner-content{
         width: 90%;
     }
-    .main-card{
+    .main-card,.sponsor-img{
         grid-template-columns: repeat(1,1fr);
         gap: 30px;
+        justify-items: center;
     }
     .exprience-content>h3,.exprience-img img{
         width: 100%;
+    }
+    .exp-text{
+        margin: 50px auto;
     }
 }
 
@@ -201,13 +219,13 @@ margin-bottom: 30px;
     .feature,.exprience{
         flex-direction: column;
     }
-    .banner-content{
-        width: 85%;
+    .banner-content,.exprience-content{
+        width: 100%;
     }
     h2{
         font-size: 3rem;
     }
-    .main-card{
+    .main-card,.sponsor-img{
         grid-template-columns: repeat(2,1fr);
         gap: 30px;
     }
