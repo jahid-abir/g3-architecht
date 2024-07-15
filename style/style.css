@@ -35,6 +35,16 @@ main{
 section{
     margin-top: 100px;
 }
+.section-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+p{
+    color: #727272;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
 /* navigation section */
 header{
     background-color: rgba(255, 144, 14, 0.1);
@@ -94,19 +104,72 @@ margin-bottom: 30px;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
 }
-.feature-content h3{
-    font-size: 3rem;
-    font-weight: 700;
-}
-.feature-content p{
-    color: #727272;
-    margin-top: 24px;
-    margin-bottom: 32px;
-}
 
+/* exprience section */
+.exprience{
+    display: flex;
+    justify-content: space-between;   
+}
+.exprience-content>h3{
+    width: 460px; 
+    border-left: 5px solid #FF900E;
+    padding-left: 30px;
+}
+.exprience-content{
+    width: 40%;
+}
+.exp-text{
+    background-color: #FF900E;
+    width: 30%;
+    padding: 40px;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    bottom: 10%;
+    right: 10%;
+}
+.large{
+    font-size: 4rem;
+}
+.content-section-p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content-section{
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+}
+.exprience-img img{
+    position:relative;
+}
+/* some facts style section */
+.main-card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.card{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #FF900E;
+    padding: 45px 35px;
+    border-radius: 10px;
+}
+.card-number{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.card-content{
+    font-size: 20px;
+    font-weight: 600;
+}
+.outside-card p{
+    width: 540px;
+    margin-bottom:100px;
+}
 /* responsive */
 @media screen and (max-width : 576px) {
-    nav,.feature{
+    nav,.feature,.exprience{
         flex-direction: column;
     }
     .navbar, nav{
@@ -115,10 +178,37 @@ margin-bottom: 30px;
     .banner-content{
         width: 90%;
     }
-    h2{
+    h2,.large{
         font-size: 2rem;
     }
     .feature-img{
         grid-template-columns: repeat(1,1fr);
+    }
+    .exprience-content,.outside-card p{
+        width: 90%;
+    }
+    .main-card{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+    .exprience-content>h3,.exprience-img img{
+        width: 100%;
+    }
+}
+
+/* medium device  */
+@media screen and (min-width : 576px) and (max-width : 992px) {
+    .feature,.exprience{
+        flex-direction: column;
+    }
+    .banner-content{
+        width: 85%;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .main-card{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
     }
 }
